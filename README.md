@@ -6,4 +6,4 @@ I'm trying to get my head around the majors technologies used to make user-inter
 
 Name | Screenshot
 --- | ---
-Super Metroid - Title screen | ![Super metroid screenshot](1-super_metroid_title_screen/reference.jpg?raw=true)
+Papers, please | ![Papers please](1-papers_please/reference.jpg?raw=true)

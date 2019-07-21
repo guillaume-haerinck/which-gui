@@ -10,6 +10,30 @@
     src: url('fonts/BMgermar.TTF') format('truetype');
 }
 
+@keyframes slidein {
+    0% { transform: translate3d(0, 100vh, 0); }
+    5% { transform: translate3d(0, 95vh, 0); }
+    10% { transform: translate3d(0, 90vh, 0); }
+    15% { transform: translate3d(0, 85vh, 0); }
+    20% { transform: translate3d(0, 80vh, 0); }
+    25% { transform: translate3d(0, 75vh, 0); }
+    30% { transform: translate3d(0, 70vh, 0); }
+    35% { transform: translate3d(0, 65vh, 0); }
+    40% { transform: translate3d(0, 60vh, 0); }
+    45% { transform: translate3d(0, 55vh, 0); }
+    50% { transform: translate3d(0, 50vh, 0); }
+    55% { transform: translate3d(0, 45vh, 0); }
+    60% { transform: translate3d(0, 40vh, 0); }
+    65% { transform: translate3d(0, 35vh, 0); }
+    70% { transform: translate3d(0, 30vh, 0); }
+    75% { transform: translate3d(0, 25vh, 0); }
+    80% { transform: translate3d(0, 20vh, 0); }
+    85% { transform: translate3d(0, 15vh, 0); }
+    90% { transform: translate3d(0, 10vh, 0); }
+    95% { transform: translate3d(0, 5vh, 0); }
+    100% { transform: translate3d(0, 0px, 0); }
+}
+
 :root {
     --color-text: grey;
 }
@@ -27,8 +51,9 @@ body {
     grid-auto-flow: row;
     justify-items: center;
     align-content: center;
-    grid-gap: 50px;
+    grid-gap: 60px;
     height: 100%;
+    animation: slidein 23s ease-in-out;
 }
 
 #title-container img {
@@ -48,13 +73,16 @@ button {
     border-color: var(--color-text);
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 #text-container {
-    margin-top: 15px;
     text-align: center;
 }
 
 p {
-    margin: 0;
+    margin: 3px 0;
     font-family: '04b_03';
     font-size: 18px;
 }

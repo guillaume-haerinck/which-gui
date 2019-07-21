@@ -1,0 +1,60 @@
+/* browser-sync start --server --files "*" */
+
+@font-face {
+    font-family: '04b_03';
+    src: url('fonts/04B_03__.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'BMgermar';
+    src: url('fonts/BMgermar.TTF') format('truetype');
+}
+
+:root {
+    --color-text: grey;
+}
+
+body {
+    padding: 0px 20px;
+    height: 100vh;
+    background-color: black;
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+#page-container {
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-content: center;
+    grid-gap: 50px;
+    height: 100%;
+}
+
+#title-container img {
+    width: 100%;
+    max-width: 700px;
+}
+
+button {
+    font-family: 'BMgermar';
+    background: none;
+    font-size: 26px;
+    color: var(--color-text);
+    padding: 6px 60px;
+
+    border-style: dotted;
+    border-radius: 5px;
+    border-color: var(--color-text);
+}
+
+#text-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+    font-family: '04b_03';
+    font-size: 18px;
+}

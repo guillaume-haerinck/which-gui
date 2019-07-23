@@ -6,4 +6,4 @@ I'm trying to get my head around the major technologies used to make user-interf
 
 Name | Screenshot | Made with
 --- | --- | ---
-Papers, please | ![Papers please](doc/readme-img/papers-please.gif?raw=true) | ![HTML](doc/readme-img/html.png?raw=true) ![XAML](doc/readme-img/xaml.png?raw=true)
+Papers, please | ![Papers please](doc/readme-img/papers-please.gif?raw=true) | ![HTML](doc/readme-img/html.png?raw=true) ![XAML](doc/readme-img/xaml.png?raw=true) ![QML](doc/readme-img/qt.png?raw=true)

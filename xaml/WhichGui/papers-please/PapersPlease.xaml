@@ -1,0 +1,38 @@
+﻿<Window x:Class="WhichGui.PapersPlease"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WhichGui"
+        mc:Ignorable="d"
+        Title="PapersPlease" Height="450" Width="800">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="257*"/>
+            <RowDefinition Height="87*"/>
+            <RowDefinition Height="75*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="Title" Grid.Row="0" Source="./title.png" Height="195.696" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="339.84" Margin="226.08,0"/>
+        <TextBlock x:Name="Credit" Grid.Row="2"  Height="25.756" TextWrapping="Wrap" VerticalAlignment="Top" Width="206.5" Foreground="Gray" TextAlignment="Center" FontFamily="/WhichGui;component/papers-please/#04b03" HorizontalAlignment="Center" Margin="292.75,0" FontSize="11"><Run Text="created by Lucas Pope"/><LineBreak/><Run Text="@dukope"/></TextBlock>
+        <Button x:Name="Play" Grid.Row="1" Content="PLAY" HorizontalAlignment="Center" Height="25.333" VerticalAlignment="Center" Width="119" Background="{x:Null}" Foreground="#FFA4A4A4" BorderThickness="1" FontFamily="/WhichGui;component/papers-please/#BM germar A12" FontSize="16">
+            <Button.BorderBrush>
+                <VisualBrush>
+                    <VisualBrush.Visual>
+                        <Rectangle StrokeDashArray="1 2"
+                          Stroke="#FF8B8B8B"
+                          StrokeThickness="10"
+                          RadiusX="20"
+                          RadiusY="20"
+                          Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type Border}}, Path=ActualWidth}"
+                          Height="250"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Button.BorderBrush>
+        </Button>
+
+
+
+
+
+    </Grid>
+</Window>

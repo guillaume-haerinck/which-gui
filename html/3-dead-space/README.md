@@ -1,4 +1,4 @@
-# 2-dead-space
+# 3-dead-space
 
 ## Project setup
 ```

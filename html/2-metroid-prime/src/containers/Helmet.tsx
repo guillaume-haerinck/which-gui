@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import styled, { ThemedStyledFunction, StyledFunction } from 'styled-components';
+import styled from 'styled-components';
+
+import reference from '../assets/images/reference.png';
 
 import LifeBar from '../components/helmet/LifeBar';
 import DangerLevel from '../components/helmet/DangerLevel';
@@ -14,6 +16,9 @@ const HelmetContainer = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   height: 100%;
   width: 100%;
+
+  background-image: url(${reference});
+  background-size: cover;
 `;
 
 const Hud = styled.div`

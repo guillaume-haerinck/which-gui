@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Helmet.module.scss';
+import styled from 'styled-components';
 
 import LifeBar from '../components/helmet/LifeBar';
 import DangerLevel from '../components/helmet/DangerLevel';
@@ -9,26 +9,39 @@ import Radar from '../components/helmet/Radar';
 import VisionPicker from '../components/helmet/VisionPicker';
 import WeaponPicker from '../components/helmet/WeaponPicker';
 
+const HelmetContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const Hud = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+`;
+
 export default class Helmet extends Component {
   render() {
     return (
-      <div className="helmet">
-        <div>
-          <Radar></Radar>
-          <DangerLevel></DangerLevel>
-          <VisionPicker></VisionPicker>
-        </div>
+      <HelmetContainer>
+        <Hud>
+          <div className="left">
+            <Radar></Radar>
+            <DangerLevel></DangerLevel>
+            <VisionPicker></VisionPicker>
+          </div>
 
-        <div>
-          <LifeBar></LifeBar>
-        </div>
+          <div className="center">
+            <LifeBar></LifeBar>
+          </div>
 
-        <div>
-          <Map></Map>
-          <MissileLevel></MissileLevel>
-          <WeaponPicker></WeaponPicker>
-        </div>
-      </div>
+          <div className="right">
+            <Map></Map>
+            <MissileLevel></MissileLevel>
+            <WeaponPicker></WeaponPicker>
+          </div>
+        </Hud>
+      </HelmetContainer>
     )
   }
 }

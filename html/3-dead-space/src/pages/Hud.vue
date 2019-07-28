@@ -11,7 +11,7 @@ import Inventory from './inventory/Inventory.vue';
     Inventory,
   },
 })
-export default class MenuScreen extends Vue {
+export default class Hud extends Vue {
 }
 </script>
 

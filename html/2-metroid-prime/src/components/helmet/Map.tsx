@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Map.module.scss';
 
-const Map: React.FC = () => {
-  return (
-    <p>Map works !</p>
-  );
+export default class Map extends Component {
+  render() {
+    return (
+      <p>Map works !</p>
+    )
+  }
 }
-
-export default Map;

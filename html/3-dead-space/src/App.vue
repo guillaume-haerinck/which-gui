@@ -6,11 +6,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import MenuScreen from './components/MenuScreen.vue';
+import Hud from './pages/Hud.vue';
 
 @Component({
   components: {
-    MenuScreen,
+    Hud,
   },
 })
 export default class App extends Vue {}

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './MissileLevel.module.scss';
 
-const MissileLevel: React.FC = () => {
-  return (
-    <p>MissileLevel works !</p>
-  );
+export default class MissileLevel extends Component {
+  render() {
+    return (
+      <p>MissileLevel works !</p>
+    )
+  }
 }
-
-export default MissileLevel;

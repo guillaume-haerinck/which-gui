@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Radar.module.scss';
 
-const Radar: React.FC = () => {
-  return (
-    <p>Radar works !</p>
-  );
+export default class Radar extends Component {
+  render() {
+    return (
+      <p>Radar works !</p>
+    )
+  }
 }
-
-export default Radar;

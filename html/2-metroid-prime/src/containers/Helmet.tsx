@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { ThemedStyledFunction, StyledFunction } from 'styled-components';
 
 import LifeBar from '../components/helmet/LifeBar';
 import DangerLevel from '../components/helmet/DangerLevel';
@@ -10,37 +10,59 @@ import VisionPicker from '../components/helmet/VisionPicker';
 import WeaponPicker from '../components/helmet/WeaponPicker';
 
 const HelmetContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100%;
+  width: 100%;
 `;
 
 const Hud = styled.div`
   display: grid;
+  grid-row: 2;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  justify-self: center;
+`;
+
+const Column = styled.div`
+  display: grid;
+  grid-column: ${props => (props as any).position || 0 };
+  grid-auto-flow: row;
+  background-color: red;
+` as any;
+
+const HelmetTop = styled.div`
+  grid-row: 1;
+`;
+
+const HelmetBottom = styled.div`
+  grid-row: 3;
 `;
 
 export default class Helmet extends Component {
   render() {
     return (
       <HelmetContainer>
+        <HelmetTop></HelmetTop>
+
         <Hud>
-          <div className="left">
+          <Column position="1">
             <Radar></Radar>
             <DangerLevel></DangerLevel>
             <VisionPicker></VisionPicker>
-          </div>
+          </Column>
 
-          <div className="center">
+          <Column position="2">
             <LifeBar></LifeBar>
-          </div>
+          </Column>
 
-          <div className="right">
+          <Column position="3">
             <Map></Map>
             <MissileLevel></MissileLevel>
             <WeaponPicker></WeaponPicker>
-          </div>
+          </Column>
         </Hud>
+
+        <HelmetBottom></HelmetBottom>
       </HelmetContainer>
     )
   }

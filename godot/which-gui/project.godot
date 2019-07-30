@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="which-gui"
-run/main_scene="res://papers-please/title.scn"
+run/main_scene="res://1-papers-please/title.scn"
 config/icon="res://icon.png"
 
 [rendering]

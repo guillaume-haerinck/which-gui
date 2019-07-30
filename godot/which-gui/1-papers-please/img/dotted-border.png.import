@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/title.png-2015f86a2777f7bd7d94bf300253ec65.stex"
+path="res://.import/dotted-border.png-173f6c323b6d050d7de7f987bc3da892.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://papers-please/title.png"
-dest_files=[ "res://.import/title.png-2015f86a2777f7bd7d94bf300253ec65.stex" ]
+source_file="res://1-papers-please/img/dotted-border.png"
+dest_files=[ "res://.import/dotted-border.png-173f6c323b6d050d7de7f987bc3da892.stex" ]
 
 [params]
 

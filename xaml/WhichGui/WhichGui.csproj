@@ -67,13 +67,13 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="papers-please\PapersPlease.xaml">
+    <Page Include="1-papers-please\PapersPlease.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="papers-please\PapersPlease.xaml.cs">
+    <Compile Include="1-papers-please\PapersPlease.xaml.cs">
       <DependentUpon>PapersPlease.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -93,10 +93,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="papers-please\04B_03__.TTF">
+    <Resource Include="1-papers-please\04B_03__.TTF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="papers-please\BMgermar.TTF">
+    <Resource Include="1-papers-please\BMgermar.TTF">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <None Include="Properties\Settings.settings">
@@ -108,12 +108,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="papers-please\title.png">
+    <Resource Include="1-papers-please\title.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="papers-please\theme-song.mp3">
+    <Content Include="1-papers-please\theme-song.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

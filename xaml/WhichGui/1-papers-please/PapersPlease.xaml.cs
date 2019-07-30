@@ -28,7 +28,7 @@ namespace WhichGui
             InitializeComponent();
             
             this.music = new MediaPlayer();
-            music.Open(new Uri("papers-please/theme-song.mp3", UriKind.Relative));
+            music.Open(new Uri("1-papers-please/theme-song.mp3", UriKind.Relative));
             music.Play();
         }
 

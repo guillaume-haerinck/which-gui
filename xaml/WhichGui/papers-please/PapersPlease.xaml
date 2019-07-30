@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="PapersPlease" Height="450" Width="800">
     <Window.Resources>
-        <Storyboard x:Key="Arrival">
+        <Storyboard x:Key="Arrival" Completed="OnArrivalCompleted">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Title">
                 <EasingDoubleKeyFrame KeyTime="0" Value="374"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="340">
@@ -214,6 +214,15 @@
                     </EasingDoubleKeyFrame.EasingFunction>
                 </EasingDoubleKeyFrame>
                 <EasingDoubleKeyFrame KeyTime="0:0:22" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Idle" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="Title">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-34"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-34"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>

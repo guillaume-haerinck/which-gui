@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,9 +21,15 @@ namespace WhichGui
     /// </summary>
     public partial class PapersPlease : Window
     {
+        public MediaPlayer music;
+
         public PapersPlease()
         {
             InitializeComponent();
+            
+            this.music = new MediaPlayer();
+            music.Open(new Uri("papers-please/theme-song.mp3", UriKind.Relative));
+            music.Play();
         }
 
         private void OnArrivalCompleted(object sender, EventArgs e)

@@ -1,4 +1,11 @@
-<UXML xmlns="UnityEngine.UIElements">
-    <Button class="quicktool-button">
-    </Button>
+<?xml version="1.0" encoding="utf-8"?>
+<UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="UnityEngine.UIElements" xsi:noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" xsi:schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd">
+    <Box class="title"></Box>
+    
+    <Button class="start-btn" text="PLAY"></Button>
+    
+    <VisualElement class="credit-container">
+        <TextElement class="credit" text="created by Lucas Pope"></TextElement>
+        <TextElement class="credit" text="@dukope"></TextElement>
+    </VisualElement>
 </UXML>

@@ -6,7 +6,7 @@ Re-making famous user-interfaces (UI) accross multiple technologies to test and 
 
 Name | Screenshot | Made with
 --- | --- | ---
-Papers, please | ![Papers please](doc/readme-img/papers-please.gif?raw=true) | ![HTML](doc/readme-img/html.png?raw=true) ![XAML](doc/readme-img/xaml.png?raw=true) ![QML](doc/readme-img/qt.png?raw=true) <br> ![Unreal](doc/readme-img/unreal.png?raw=true) ![Godot](doc/readme-img/godot.png?raw=true) ![Unity](doc/readme-img/unity.png?raw=true)
+Papers, please | ![Papers please](doc/readme-img/papers-please.gif?raw=true) | ![Unreal](doc/readme-img/unreal.png?raw=true)![HTML](doc/readme-img/html.png?raw=true)![Unity](doc/readme-img/unity.png?raw=true)  <br> ![Godot](doc/readme-img/godot.png?raw=true) ![XAML](doc/readme-img/xaml.png?raw=true) ![QML](doc/readme-img/qt.png?raw=true)
 Metroid Prime | ![Metroid Prime](doc/readme-img/metroid-prime.png?raw=true) | 
 Dead Space | ![Dead space](doc/readme-img/dead-space.png?raw=true) | 
 
@@ -18,7 +18,7 @@ The HTML is the open markup language which **powers the web**. It comes right fr
 
 As the complexity of usages grows, frameworks like [Angular](https://angular.io/), [React](https://fr.reactjs.org/) or [Vue](https://vuejs.org/) became essential. Basically, they split the website into smaller reusable components, and they bring some of the logic into the HTML (event triggers and conditions).
 
-> The html folders contains project built vanilla Javascript (no framework), but it also contains projects made with **Vue**(<img src="doc/readme-img/vue.png?raw=true" height="15px">) and **React** (<img src="doc/readme-img/react.png?raw=true" height="15px">). If it is the case, the icon used will not be HTML, but the logo of the framework.
+> The html folders contains project built vanilla Javascript (no framework), but it also contains projects made with **Vue**(<img src="doc/readme-img/vue.png?raw=true" height="15px">) and **React** (<img src="doc/readme-img/react.png?raw=true" height="20px">). If it is the case, the icon used will not be HTML, but the logo of the framework.
 
 While HTML has been designed to make websites, in recent years we have seen the adoption of frameworks like [Electron](https://electronjs.org/) to deploy it as a desktop app, or [Coherent](https://coherent-labs.com/) to embed it in games and major game engines. 
 
@@ -28,11 +28,11 @@ While HTML has been designed to make websites, in recent years we have seen the 
 
 ![XAML](doc/readme-img/xaml.png?raw=true)
 
-The XAML language has been created by Microsoft in 2008 to support their [.NET](https://dotnet.microsoft.com/) WPF Environment. Similar to HTML, it is much more verbose has the style and most of the logic is embeded inside the XAML file. More complex logic is handled in a C# file, the *code-behind*.
+The XAML language has been created by Microsoft in 2008 to support their [.NET](https://dotnet.microsoft.com/) WPF Environment. Similar to HTML, it is much more verbose as the style and most of the logic is embedded inside the XAML file. More complex logic is handled in a C# file, the *code-behind*.
 
-It is recommanded to use [Microsoft Blend](https://docs.microsoft.com/fr-fr/visualstudio/designers/creating-a-ui-by-using-blend-for-visual-studio?view=vs-2019), a WYSIWYG editor to create anything in XAML. While this technology has been made to create Desktop app for Windows, it is possible to embed XAML interfaces in games and all of the major game engines using the 3rd party proprietary library [Noesis GUI](https://www.noesisengine.com/).
+It is recommended to use [Microsoft Blend](https://docs.microsoft.com/fr-fr/visualstudio/designers/creating-a-ui-by-using-blend-for-visual-studio?view=vs-2019), a WYSIWYG editor to create anything in XAML. While this technology has been made to create Desktop app for Windows, it is possible to embed XAML interfaces in games and all of the major game engines using the 3rd party proprietary library [Noesis GUI](https://www.noesisengine.com/).
 
-A newer, less-powerfull version of the langage has been made to support the UWP environment, but we are not using it through these projects has the restrictions are quite strong, and it has not been made to be embeded in real-time application.
+A newer, less-powerfull version of the language has been made to support the UWP environment, but we are not using it through these projects has the restrictions are quite strong, and it has not been made to be embedded in real-time application.
 
 *For more details, check the `xaml` folder.*
 
@@ -40,7 +40,7 @@ A newer, less-powerfull version of the langage has been made to support the UWP 
 
 ![QML](doc/readme-img/qt.png?raw=true) 
 
-[QT](https://www.qt.io/) is a C++ UI library which has been made public in 1995. In 2009, QT Group released the QML langage which allows to create user-interfaces in a declarative langage similar to JSON, and less verbose than HTML.
+[QT](https://www.qt.io/) is a C++ UI library which has been made public in 1995. In 2009, QT Group released the QML language which allows to create user-interfaces in a declarative language similar to JSON, and less verbose than HTML.
 
 **QT Creator** is the tool of choice to use the library, it provides a code editor and a WYSIWYG editor similar to Microsoft Blend but less powerfull. For more complex usage, you have to pay for [QT Design studio](https://www.qt.io/ui-framework), the proprietary alternative.
 
@@ -55,9 +55,9 @@ While QT is used widely to create desktop application, it is very rare to see it
 
 ![Unity](doc/readme-img/unity.png?raw=true)
 
-Released in 2005, the [Unity Engine](https://unity.com/fr) became very popular amongst indepedent game developers. It is downloadable for free since 2009, and offers built-in support for many features as Game UI. In 2019, they started a new API for UI called [UIElements](https://blogs.unity3d.com/2019/04/23/whats-new-with-uielements-in-2019-1/) which is a mix  between XAML and HTML stack, and provides better performance and scalability than the previous API.
+Released in 2005, the [Unity Engine](https://unity.com/fr) became very popular amongst independent game developers. It has been downloadable for free since 2009, and offers built-in support for many features as Game UI. In 2019, they started a new API for UI called [UIElements](https://blogs.unity3d.com/2019/04/23/whats-new-with-uielements-in-2019-1/) which is a mix  between XAML and HTML stack, and provides better performance and scalability than the previous API.
 
-The idea is to have an **UXML** file for layout similar to the HTML language. Then a **USS** file for styles, which is a subset of the CSS langage, and finally, a **C#** file to handle logic, similar to the *code-behind* file of the XAML stack.
+The idea is to have a **UXML** file for layout similar to the HTML language. Then a **USS** file for styles, which is a subset of the CSS language, and finally, a **C#** file to handle logic, similar to the *code-behind* file of the XAML stack.
 
 At the time of this writing, UIElements is restricted to extending the editor, but in-game support is announced for future releases of Unity.
 
@@ -77,8 +77,8 @@ Everything in this engine is built around the concept of Nodes, and the UI is no
 
 ![Unreal](doc/readme-img/unreal.png?raw=true)
 
-[Unreal Engine](https://www.unrealengine.com/en-US/what-is-unreal-engine-4) has been around since 1995, and used by many AAA games since. In 2015, it has been made free to download to anyone, has a way to counter-attack Unity in the independent game market.
+[Unreal Engine](https://www.unrealengine.com/en-US/what-is-unreal-engine-4) has been around since 1995, and used by many AAA games since. In 2015, it has been made free to download for anyone, as a way to counter-attack Unity in the independent game market.
 
-With the version 4 of their engine, Epic Games released the [UMG UI Designer](https://docs.unrealengine.com/en-US/Engine/UMG/index.html) tool to create user-interface and animate them inside of the engine. This powerfull tool offers a WYSIWYG editor to place the elements, and a node-based scripting system called *Blueprint* to handle the logic of the UI.
+With the version 4 of their engine, Epic Games created the [UMG UI Designer](https://docs.unrealengine.com/en-US/Engine/UMG/index.html) tools to create user-interface and animate them in the engine. This powerful tool offer a WYSIWYG editor to place the elements, and a node-based scripting system called *Blueprint* to handle the logic of the UI.
 
 *For more details, check the `unreal` folder.*

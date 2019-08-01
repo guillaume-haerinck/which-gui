@@ -19,6 +19,12 @@ const CenterContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+
+// TODO only appear with keypress, as its not supposed to be part of HUD
+/*
+  background: url(${top}) top no-repeat, url(${bottom}) bottom no-repeat;
+  background-size: 56vw auto, 60vw auto;
+*/
 `;
 
 const HelmetContainer = styled.div`
@@ -55,7 +61,15 @@ export default class Helmet extends Component {
         <HelmetContainer>
           <HudContainer>
             <Hud>
+              <Radar></Radar>
+              <DangerLevel></DangerLevel>
+              <VisionPicker></VisionPicker>
 
+              <LifeBar></LifeBar>
+
+              <Map></Map>
+              <MissileLevel></MissileLevel>
+              <WeaponPicker></WeaponPicker>
             </Hud>
           </HudContainer>
         </HelmetContainer>

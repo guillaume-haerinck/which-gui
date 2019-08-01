@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import reference from '../assets/images/reference.png';
 import background from '../assets/images/HUD.png';
+import top from '../assets/images/Helmet-Top.png';
+import bottom from '../assets/images/Helmet-Bottom.png';
 
 import LifeBar from '../components/helmet/LifeBar';
 import DangerLevel from '../components/helmet/DangerLevel';
@@ -20,55 +22,42 @@ const CenterContainer = styled.div`
 `;
 
 const HelmetContainer = styled.div`
-  height: 100%;
-  width: 100%;
-  max-width: 178vh; /* Prevent scrolling if aspect ratio unsuported */
+  width: 62%;
+  max-width: 120vh; /* Prevent scrolling if aspect ratio unsuported */
   display: grid;
-  grid-template-rows: 1fr auto 1fr;
-`;
-
-const HelmetTop = styled.div`
-  background-color: red;
-`;
-
-const HelmetBottom = styled.div`
-  background-color: red;
+  align-content: center;
+  padding-bottom: 4vh; /* Decals HUD to match the reference */
 `;
 
 const HudContainer = styled.div`
   height: 0;
-  padding-top: 50%; /* Keep aspect ration */
+  padding-top: 77%; /* Aspect ratio of the HUD image */
   position: relative;
 `;
 
 const Hud = styled.div`
   position: absolute;
   top: 0;
-  left: 20%;
-  width: 60%;
+  left: 0;
+  width: 100%;
   height: 100%;
 
   background-image: url(${background});
-  background-size: auto 90%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
 `;
-
 
 export default class Helmet extends Component {
   render() {
     return (
       <CenterContainer>
         <HelmetContainer>
-          <HelmetTop></HelmetTop>
-
           <HudContainer>
             <Hud>
 
             </Hud>
           </HudContainer>
-
-          <HelmetBottom></HelmetBottom>
         </HelmetContainer>
       </CenterContainer>
     )

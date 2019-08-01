@@ -12,19 +12,26 @@ import Radar from '../components/helmet/Radar';
 import VisionPicker from '../components/helmet/VisionPicker';
 import WeaponPicker from '../components/helmet/WeaponPicker';
 
+const CenterContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
 const HelmetContainer = styled.div`
   height: 100%;
+  width: 100%;
+  max-width: 178vh; /* Prevent scrolling if aspect ratio unsuported */
   display: grid;
   grid-template-rows: 1fr auto 1fr;
 `;
 
 const HelmetTop = styled.div`
-  min-height: 50px;
   background-color: red;
 `;
 
 const HelmetBottom = styled.div`
-  min-height: 50px;
   background-color: red;
 `;
 
@@ -51,17 +58,19 @@ const Hud = styled.div`
 export default class Helmet extends Component {
   render() {
     return (
-      <HelmetContainer>
-        <HelmetTop></HelmetTop>
+      <CenterContainer>
+        <HelmetContainer>
+          <HelmetTop></HelmetTop>
 
-        <HudContainer>
-          <Hud>
+          <HudContainer>
+            <Hud>
 
-          </Hud>
-        </HudContainer>
+            </Hud>
+          </HudContainer>
 
-        <HelmetBottom></HelmetBottom>
-      </HelmetContainer>
+          <HelmetBottom></HelmetBottom>
+        </HelmetContainer>
+      </CenterContainer>
     )
   }
 }

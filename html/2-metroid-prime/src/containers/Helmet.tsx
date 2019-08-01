@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import reference from '../assets/images/reference.png';
+import background from '../assets/images/HUD.png';
 
 import LifeBar from '../components/helmet/LifeBar';
 import DangerLevel from '../components/helmet/DangerLevel';
@@ -12,36 +13,40 @@ import VisionPicker from '../components/helmet/VisionPicker';
 import WeaponPicker from '../components/helmet/WeaponPicker';
 
 const HelmetContainer = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   height: 100%;
-  width: 100%;
-
-  background-image: url(${reference});
-  background-size: cover;
-`;
-
-const Hud = styled.div`
   display: grid;
-  grid-row: 2;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-self: center;
+  grid-template-rows: 1fr auto 1fr;
 `;
-
-const Column = styled.div`
-  display: grid;
-  grid-column: ${props => (props as any).position || 0 };
-  grid-auto-flow: row;
-  background-color: red;
-` as any;
 
 const HelmetTop = styled.div`
-  grid-row: 1;
+  min-height: 50px;
+  background-color: red;
 `;
 
 const HelmetBottom = styled.div`
-  grid-row: 3;
+  min-height: 50px;
+  background-color: red;
 `;
+
+const HudContainer = styled.div`
+  height: 0;
+  padding-top: 50%; /* Keep aspect ration */
+  position: relative;
+`;
+
+const Hud = styled.div`
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 100%;
+
+  background-image: url(${background});
+  background-size: auto 90%;
+  background-repeat: no-repeat;
+  background-position: top;
+`;
+
 
 export default class Helmet extends Component {
   render() {
@@ -49,23 +54,11 @@ export default class Helmet extends Component {
       <HelmetContainer>
         <HelmetTop></HelmetTop>
 
-        <Hud>
-          <Column position="1">
-            <Radar></Radar>
-            <DangerLevel></DangerLevel>
-            <VisionPicker></VisionPicker>
-          </Column>
+        <HudContainer>
+          <Hud>
 
-          <Column position="2">
-            <LifeBar></LifeBar>
-          </Column>
-
-          <Column position="3">
-            <Map></Map>
-            <MissileLevel></MissileLevel>
-            <WeaponPicker></WeaponPicker>
-          </Column>
-        </Hud>
+          </Hud>
+        </HudContainer>
 
         <HelmetBottom></HelmetBottom>
       </HelmetContainer>

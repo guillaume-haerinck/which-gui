@@ -18,7 +18,7 @@ The HTML is the open markup language which **powers the web**. It comes right fr
 
 As the complexity of usages grows, frameworks like [Angular](https://angular.io/), [React](https://fr.reactjs.org/) or [Vue](https://vuejs.org/) became essential. Basically, they split the website into smaller reusable components, and they bring some of the logic into the HTML (event triggers and conditions).
 
-> The html folders contains project built vanilla Javascript (no framework), but it also contains projects made with **Vue**(<img src="doc/readme-img/vue.png?raw=true" height="15px">) and **React** (<img src="doc/readme-img/react.png?raw=true" height="20px">). If it is the case, the icon used will not be HTML, but the logo of the framework.
+> The html folders contains project built vanilla Javascript (no framework), but it also contains projects made with **Vue**(<img src="doc/readme-img/vue.png?raw=true" height="15px">) or **React** (<img src="doc/readme-img/react.png?raw=true" height="20px">). If it is the case, the icon used will not be HTML, but the logo of the framework.
 
 While HTML has been designed to make websites, in recent years we have seen the adoption of frameworks like [Electron](https://electronjs.org/) to deploy it as a desktop app, or [Coherent](https://coherent-labs.com/) to embed it in games and major game engines. 
 

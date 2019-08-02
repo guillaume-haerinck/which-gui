@@ -20,6 +20,8 @@ const CenterContainer = styled.div`
   display: flex;
   justify-content: center;
 
+  //background-image: url(${reference});
+
 // TODO only appear with keypress, as its not supposed to be part of HUD
 /*
   background: url(${top}) top no-repeat, url(${bottom}) bottom no-repeat;

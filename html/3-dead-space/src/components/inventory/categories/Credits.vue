@@ -1,5 +1,5 @@
 <template>
-  
+  <div>I'm the credits</div>
 </template>
 
 <script lang="ts">

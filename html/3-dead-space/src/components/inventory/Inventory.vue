@@ -3,12 +3,13 @@
     <Weapons class="weapons"></Weapons>
     <Items class="items"></Items>
 
-    <Credits></Credits>
-
-    <Nodes></Nodes>
-    <Suit></Suit>
-
-    <ItemDescription></ItemDescription>
+    <div class="misc">
+      <Credits></Credits>
+      <Nodes></Nodes>
+      <Suit></Suit>
+    </div>
+  
+    <ItemDescription class="item-description"></ItemDescription>
   </div>
 </template>
 
@@ -49,6 +50,11 @@ export default class Inventory extends Vue {
     .items {
       grid-row: 1;
       grid-column: 2;
+    }
+
+    .item-description {
+      grid-row: 2;
+      grid-column: 1 / 4;
     }
   }
 </style>

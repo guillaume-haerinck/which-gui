@@ -1,5 +1,5 @@
 <template>
-  
+  <div>I'm the item description</div>
 </template>
 
 <script lang="ts">

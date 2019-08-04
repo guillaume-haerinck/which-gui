@@ -1,5 +1,5 @@
 <template>
-  
+  <div>I'm the nodes</div>
 </template>
 
 <script lang="ts">

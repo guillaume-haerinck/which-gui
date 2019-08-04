@@ -1,6 +1,14 @@
 <template>
   <div class="inventory">
-    <Items></Items>
+    <Weapons class="weapons"></Weapons>
+    <Items class="items"></Items>
+
+    <Credits></Credits>
+
+    <Nodes></Nodes>
+    <Suit></Suit>
+
+    <ItemDescription></ItemDescription>
   </div>
 </template>
 
@@ -28,5 +36,19 @@ export default class Inventory extends Vue {
 </script>
 
 <style scoped lang="scss">
+  .inventory {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 
+    .weapons {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .items {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
 </style>

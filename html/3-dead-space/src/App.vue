@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MenuScreen></MenuScreen>
+    <Hud></Hud>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import Hud from './pages/Hud.vue';
 
 @Component({
   components: {
-    Hud,
+    Hud
   },
 })
 export default class App extends Vue {}

@@ -4,11 +4,11 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import Inventory from './inventory/Inventory.vue';
+import Inventory from '../components/inventory/Inventory.vue';
 
 @Component({
   components: {
-    Inventory,
+    Inventory
   },
 })
 export default class Hud extends Vue {

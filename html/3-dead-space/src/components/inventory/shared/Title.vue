@@ -1,5 +1,5 @@
 <template>
-  <div class="title" v-bind:class="{ large: isLarge }">{{ title }}</div>
+  <div class="title">{{ title }}</div>
 </template>
 
 <script lang="ts">
@@ -7,11 +7,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({
   props: {
-    title: String,
-    isLarge: {
-      type: Boolean,
-      default: false
-    }
+    title: String
   }
 })
 export default class Title extends Vue {
@@ -26,11 +22,5 @@ export default class Title extends Vue {
     background-size: contain;
     background-position: center;
     text-align: center;
-  }
-
-  .large {
-    background-image: url('../../../assets/images/TitleLarge.png');
-    text-align: left;
-    background-position: left;
   }
 </style>

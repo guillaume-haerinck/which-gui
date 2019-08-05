@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import reference from '../assets/images/reference.png';
+import background from '../assets/images/HUD.png';
+import top from '../assets/images/Helmet-Top.png';
+import bottom from '../assets/images/Helmet-Bottom.png';
 
 import LifeBar from '../components/helmet/LifeBar';
 import DangerLevel from '../components/helmet/DangerLevel';
@@ -11,64 +14,68 @@ import Radar from '../components/helmet/Radar';
 import VisionPicker from '../components/helmet/VisionPicker';
 import WeaponPicker from '../components/helmet/WeaponPicker';
 
-const HelmetContainer = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+const CenterContainer = styled.div`
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
 
-  background-image: url(${reference});
-  background-size: cover;
+  //background-image: url(${reference});
+
+// TODO only appear with keypress, as its not supposed to be part of HUD
+/*
+  background: url(${top}) top no-repeat, url(${bottom}) bottom no-repeat;
+  background-size: 56vw auto, 60vw auto;
+*/
+`;
+
+const HelmetContainer = styled.div`
+  width: 62%;
+  max-width: 120vh; /* Prevent scrolling if aspect ratio unsuported */
+  display: grid;
+  align-content: center;
+  padding-bottom: 4vh; /* Decals HUD to match the reference */
+`;
+
+const HudContainer = styled.div`
+  height: 0;
+  padding-top: 77%; /* Aspect ratio of the HUD image */
+  position: relative;
 `;
 
 const Hud = styled.div`
-  display: grid;
-  grid-row: 2;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-self: center;
-`;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 
-const Column = styled.div`
-  display: grid;
-  grid-column: ${props => (props as any).position || 0 };
-  grid-auto-flow: row;
-  background-color: red;
-` as any;
-
-const HelmetTop = styled.div`
-  grid-row: 1;
-`;
-
-const HelmetBottom = styled.div`
-  grid-row: 3;
+  background-image: url(${background});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
 `;
 
 export default class Helmet extends Component {
   render() {
     return (
-      <HelmetContainer>
-        <HelmetTop></HelmetTop>
+      <CenterContainer>
+        <HelmetContainer>
+          <HudContainer>
+            <Hud>
+              <Radar></Radar>
+              <DangerLevel></DangerLevel>
+              <VisionPicker></VisionPicker>
 
-        <Hud>
-          <Column position="1">
-            <Radar></Radar>
-            <DangerLevel></DangerLevel>
-            <VisionPicker></VisionPicker>
-          </Column>
+              <LifeBar></LifeBar>
 
-          <Column position="2">
-            <LifeBar></LifeBar>
-          </Column>
-
-          <Column position="3">
-            <Map></Map>
-            <MissileLevel></MissileLevel>
-            <WeaponPicker></WeaponPicker>
-          </Column>
-        </Hud>
-
-        <HelmetBottom></HelmetBottom>
-      </HelmetContainer>
+              <Map></Map>
+              <MissileLevel></MissileLevel>
+              <WeaponPicker></WeaponPicker>
+            </Hud>
+          </HudContainer>
+        </HelmetContainer>
+      </CenterContainer>
     )
   }
 }

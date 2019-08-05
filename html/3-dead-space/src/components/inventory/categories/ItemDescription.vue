@@ -20,17 +20,10 @@ export default class ItemDescription extends Vue {
 </script>
 
 <style scoped lang="scss">
-  .top {
-    background: url('../../../assets/images/TitleLarge.png') 0 0 no-repeat;
-    height: 30px;
-    text-align: left;
-    padding-left: 10px;
-  }
-
-  .bottom {
-    background: url('../../../assets/images/TitleLarge.png') 0 -33px no-repeat;
-    height: 30px;
-    text-align: left;
-    padding-left: 10px;
+  .item-description {
+    background: url('../../../assets/images/TitleLargeTop.png') top left no-repeat, 
+      url('../../../assets/images/TitleLargeBottom.png') bottom left no-repeat;
+    display: inline-grid;
+    grid-template-rows: 32px 1fr 32px;
   }
 </style>

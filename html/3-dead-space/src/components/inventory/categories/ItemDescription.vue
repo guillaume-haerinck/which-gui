@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title></Title>
+    <Title title="NAME OF THE ITEM" isLarge="true"></Title>
     <div>I'm the item description</div>
   </div>
 </template>

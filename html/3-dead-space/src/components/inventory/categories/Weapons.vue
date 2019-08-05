@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title></Title>
+    <Title title="Weapons"></Title>
     <div class="weapons-container">
       <div class="weapon top">I'm a weapon</div>
       <div class="weapon left">I'm a weapon</div>

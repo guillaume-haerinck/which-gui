@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title></Title>
+    <Title title="Suit"></Title>
     <div>I'm the suit</div>
   </div>
 </template>

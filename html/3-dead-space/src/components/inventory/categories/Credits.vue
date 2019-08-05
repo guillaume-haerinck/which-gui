@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Title></Title>
+    <Title title="Credits"></Title>
     <div>I'm the credits</div>
   </div>
 </template>

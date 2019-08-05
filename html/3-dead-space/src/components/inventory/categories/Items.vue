@@ -1,15 +1,19 @@
 <template>
     <div class="items">
-        <div class="item" v-for="n in 20">
-            <p>I'm an item</p>
-        </div>
+        <Item v-for="n in 20">
+        </Item>
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import Item from "../shared/Item.vue";
 
-@Component
+@Component({
+  components: {
+    Item
+  }
+})
 export default class Items extends Vue {
 }
 </script>

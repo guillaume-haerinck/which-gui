@@ -4,11 +4,12 @@
     <Items class="items"></Items>
 
     <div class="misc">
-      <Credits></Credits>
-      <Nodes></Nodes>
       <Suit></Suit>
+      <Nodes></Nodes>
+      <Credits></Credits>
     </div>
   
+    <KeyItems class="key-items"></KeyItems>
     <ItemDescription class="item-description"></ItemDescription>
   </div>
 </template>
@@ -21,6 +22,7 @@ import Items from './categories/Items.vue';
 import Nodes from './categories/Nodes.vue';
 import Suit from './categories/Suit.vue';
 import Weapons from './categories/Weapons.vue';
+import KeyItems from './categories/KeyItems.vue';
 
 @Component({
   components: {
@@ -29,7 +31,8 @@ import Weapons from './categories/Weapons.vue';
     Items,
     Nodes,
     Suit,
-    Weapons
+    Weapons,
+    KeyItems
   }
 })
 export default class Inventory extends Vue {
@@ -52,9 +55,14 @@ export default class Inventory extends Vue {
       grid-column: 2;
     }
 
+    .key-items {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
     .item-description {
       grid-row: 2;
-      grid-column: 1 / 4;
+      grid-column: 2 / 4;
     }
   }
 </style>

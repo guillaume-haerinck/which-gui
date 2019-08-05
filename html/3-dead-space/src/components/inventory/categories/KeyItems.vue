@@ -1,7 +1,7 @@
 <template>
   <div>
     <Title></Title>
-    <div>I'm the nodes</div>
+    <div>I'm the key items</div>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ import Title from "../shared/Title.vue";
     Title
   }
 })
-export default class Nodes extends Vue {
+export default class KeyItems extends Vue {
 }
 </script>
 

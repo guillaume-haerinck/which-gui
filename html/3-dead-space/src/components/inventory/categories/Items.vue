@@ -1,7 +1,6 @@
 <template>
     <div class="items">
-        <Item v-for="n in 20">
-        </Item>
+        <Item v-for="n in 20"></Item>
     </div>
 </template>
 

@@ -16,11 +16,10 @@ export default class Title extends Vue {
 
 <style scoped lang="scss">
   .title {
-    background-image: url('../../../assets/images/TitleSmall.png');
-    background-repeat: no-repeat;
+    background: url('../../../assets/images/TitleSmall.png') center no-repeat;
+    min-width: 180px;
     padding: 5px;
     background-size: contain;
-    background-position: center;
     text-align: center;
   }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="item-description">
-    <div class="top">ITEM NAME</div>
+    <div class="top">
+      ITEM NAME
+    </div>
     <div>I'm the item description</div>
     <div class="bottom">Buttons</div>
   </div>
